@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExibeMoedasComponent } from './exibe-moedas.component';
+import { MoedasListComponent } from './moedas-list.component';
 
-describe('ExibeMoedasComponent', () => {
-  let component: ExibeMoedasComponent;
-  let fixture: ComponentFixture<ExibeMoedasComponent>;
+describe('MoedasListComponent', () => {
+  let component: MoedasListComponent;
+  let fixture: ComponentFixture<MoedasListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExibeMoedasComponent ]
+      declarations: [ MoedasListComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ExibeMoedasComponent);
+    fixture = TestBed.createComponent(MoedasListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
