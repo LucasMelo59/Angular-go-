@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MoedasService } from './service/moedas-list.service';
+import { Moeda } from '../../../models/moeda';
 
 @Component({
   selector: 'app-moedas-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoedasListComponent implements OnInit {
 
-  constructor() { }
+  moedas: Moeda[] = [];
+  filter: string = '';
+  constructor(private MoedasService: MoedasService) { }
 
   ngOnInit(): void {
+
+    this.MoedasService
+    .listFromUser()
+    .subscribe(moedas => this.moedas = moedas);
   }
 
 }

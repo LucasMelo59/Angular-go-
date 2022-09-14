@@ -1,1 +1,20 @@
-<p>exibe-moeda works!</p>
+
+
+
+  <div class="container mb-2 "  >
+    <div class="row"  >
+      <div class="col-3 text-center" *ngFor="let moeda of moedas"  >
+          <ap-moeda
+
+          [src]="moeda.src"
+          [descricao]="moeda.descricao"
+          [preco]="moeda.preco"
+          [nome]="moeda.nome"
+          [votos]="moeda.votos"
+          >
+
+        </ap-moeda>
+
+        </div>
+      </div>
+    </div>

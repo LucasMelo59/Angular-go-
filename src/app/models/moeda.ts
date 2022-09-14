@@ -5,6 +5,7 @@ updated_at: string
 deleted_at: string
 nome: string
 descricao: string
-preco: Float64Array
+preco: number
 votos: number
+src: string
 }
