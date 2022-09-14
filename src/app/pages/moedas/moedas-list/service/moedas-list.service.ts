@@ -13,4 +13,11 @@ export class MoedasService {
         return this.http
             .get<Moeda[]>(API +'/moedas');
     }
-}
+
+
+    Votes() {
+
+      return this.http.get<Moeda[]>(API + '/moedas/upvoter')
+    }
+  }
+

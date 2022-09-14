@@ -18,6 +18,8 @@ export class MoedasListComponent implements OnInit {
     this.MoedasService
     .listFromUser()
     .subscribe(moedas => this.moedas = moedas);
+
+   
   }
 
 }
