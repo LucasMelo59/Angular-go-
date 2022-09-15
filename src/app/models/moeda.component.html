@@ -1,9 +1,14 @@
 <div class="card"style="width: 18rem;">
-  <img [src]="src" class="card-img" alt="...">
-  <div class="card-body">
+  <div class="mb-2 mt-2" >
+    <i [class]="class"></i>
+  </div>
+
+ 
+  <div class="card-body  " >
     <h5 class="card-title">{{nome}}</h5>
     <p class="card-text"> Codigo: {{descricao}}</p>
     <p class="card-text"> Preço(USD): {{preco}}</p>
     <p class="card-text">Votos: {{votos}}</p>
-    <button href="#" class="btn btn-primary" (click)="addVotos()" >Vote Aqui!</button>
+    <button href="#" class="btn btn-primary mx-2" type="submit" (click)="addVotos(id)" >Vote Aqui!</button>
+    <button href="" class="btn btn-primary " type="submit" (click)="removeVotos(id)" >Cancelar Voto!</button>
   </div>

@@ -8,10 +8,13 @@ import { MoedaInvalidaModule } from './pages/moedas/moeda-invalida/moeda-invalid
 import { HttpClientModule } from '@angular/common/http';
 import { MoedasListModule } from './pages/moedas/moedas-list/moedas-list.module';
 import { MoedasListRoutes } from './pages/moedas/moedas-list/moedas-list.routing';
+import { MoedaByIdRoutes } from './pages/moedas/moeda-by-id/moeda-by-id.routing';
+import { MoedaByIdModule } from './pages/moedas/moeda-by-id/moeda-by-id.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+
 
   ],
   imports: [
@@ -22,7 +25,9 @@ import { MoedasListRoutes } from './pages/moedas/moedas-list/moedas-list.routing
     MoedasListRoutes,
     MoedaInvalidaRoutes,
     MoedaInvalidaModule,
-    AppRoutingModule,
+    MoedaByIdRoutes,
+    MoedaByIdModule,
+    AppRoutingModule
 
 
   ],

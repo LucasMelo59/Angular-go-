@@ -15,9 +15,14 @@ export class MoedasService {
     }
 
 
-    Votes() {
+    Votes(id:number) {
 
-      return this.http.get<Moeda[]>(API + '/moedas/upvoter')
+      return this.http.get<Moeda[]>(API + '/moedas/upvoter/' + id)
+    }
+
+    DownVotes(id:number) {
+
+      return this.http.get<Moeda[]>(API + '/moedas/downvoter/' + id)
     }
   }
 
