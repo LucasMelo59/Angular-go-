@@ -8,10 +8,11 @@ import { MoedasService } from '../pages/moedas/moedas-list/service/moedas-list.s
 })
 export class MoedaComponent implements OnInit {
   moedas: Moeda[] = []
- constructor(private MoedasService: MoedasService){}
+  moeda : Moeda | undefined
+ constructor(private moedasService: MoedasService){}
   ngOnInit(): void {
   }
-  
+
 
   @Input() id: number = 0;
   @Input() class =''
@@ -20,12 +21,16 @@ export class MoedaComponent implements OnInit {
   @Input() descricao = '';
   @Input() votos = 0;
 
-  addVotos(id:number){
-
-    this.MoedasService.Votes(id).subscribe(moedas => this.moedas = moedas)
+  addVotes( id: number , value: number){
+    this.moedasService.Votes(id, value).subscribe(
+      {
+        next: (res) => this.moeda = res,
+        error: (err) => err
+      }
+    )
   }
 
   removeVotos(id:number){
-    this.MoedasService.DownVotes(id).subscribe(moedas => this.moedas = moedas)
+    this.moedasService.DownVotes(id).subscribe(moedas => this.moedas = moedas)
   }
 }

@@ -11,15 +11,16 @@ export class MoedasListComponent implements OnInit {
 
   moedas: Moeda[] = [];
   filter: string = '';
-  constructor(private MoedasService: MoedasService) { }
+  constructor(private moedasService: MoedasService) { }
 
   ngOnInit(): void {
 
-    this.MoedasService
-    .listFromUser()
-    .subscribe(moedas => this.moedas = moedas);
+    this.moedasService.allCoins.subscribe({
+      next: (res) => this.moedas = res,
+      error: (err) => err
+  })
 
-   
-  }
+}
+  
 
 }

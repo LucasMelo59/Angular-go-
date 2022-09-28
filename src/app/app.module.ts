@@ -10,10 +10,13 @@ import { MoedasListModule } from './pages/moedas/moedas-list/moedas-list.module'
 import { MoedasListRoutes } from './pages/moedas/moedas-list/moedas-list.routing';
 import { MoedaByIdRoutes } from './pages/moedas/moeda-by-id/moeda-by-id.routing';
 import { MoedaByIdModule } from './pages/moedas/moeda-by-id/moeda-by-id.module';
+import { NavBarComponent } from './templates/nav-bar/nav-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavBarComponent,
 
 
   ],
@@ -27,7 +30,8 @@ import { MoedaByIdModule } from './pages/moedas/moeda-by-id/moeda-by-id.module';
     MoedaInvalidaModule,
     MoedaByIdRoutes,
     MoedaByIdModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
 
 
   ],

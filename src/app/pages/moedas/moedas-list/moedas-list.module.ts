@@ -4,6 +4,7 @@ import { MoedasListComponent } from "./moedas-list.component";
 import { MoedaComponent } from '../../../models/moeda.component';
 import { filterbyDescription } from "./filterByDescription.pipe";
 import { ExibeMoedaComponent } from '../exibe-moeda/exibe-moeda.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ MoedasListComponent,
@@ -13,6 +14,7 @@ import { ExibeMoedaComponent } from '../exibe-moeda/exibe-moeda.component';
     ],
 imports: [
   CommonModule,
+  FormsModule
 
 ]
 })
