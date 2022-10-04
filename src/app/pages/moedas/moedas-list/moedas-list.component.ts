@@ -13,14 +13,24 @@ export class MoedasListComponent implements OnInit {
   filter: string = '';
   constructor(private moedasService: MoedasService) { }
 
-  ngOnInit(): void {
 
-    this.moedasService.allCoins.subscribe({
-      next: (res) => this.moedas = res,
-      error: (err) => err
-  })
+  ngOnInit(): void {
+    this.moedasService.allCoins.subscribe(
+      res => {
+        this.moedas = res;
+        this.moedas.sort()
+
+      }
+    );
 
 }
-  
 
+addVotos(moedas: Moeda, id: number){
+  this.moedasService.Votes(moedas, id).subscribe(
+    result => {
+      moedas.votos = result.votos
+    }
+  )
+
+}
 }

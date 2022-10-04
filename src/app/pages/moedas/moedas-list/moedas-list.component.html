@@ -1,19 +1,22 @@
 
 
 
+  <div class="container  " >
+    <div class="row mb-2  "  >
+      <div class="col-sm-12 col-md-6 col-lg-3 mb-2 mt-3 text-center" *ngFor="let moedas of moedas"    >
+        <div class="card  "  >
+            <a routerlink="/buscar" >
+              <div class="card-body "  >
+               <i [class]="moedas.src" class="mb-2 mt-2" > </i>
+               <h5 class="card-title">{{moedas.nome}}</h5>
+               <p class="card-text"> Codigo: {{moedas.descricao}} </p>
+               <p class="card-text"> Preço(USD): {{moedas.preco}} </p>
+               <p class="card-text">Votos: {{moedas.votos}} </p>
+               <button href="#" class="btn btn-primary mx-2" type="submit" (click)="addVotos(moedas, moedas.id)"  >Vote Aqui!</button>
+             </div >
+            </a>
+        </div>
+        </div>
+      </div>
+    </div>
 
-
-<div class="text-center mt-3 mb-3" >
-  <form >
-    <input
-      class="rounded"
-      type="search"
-      placeholder="search..."
-      (keyup) = "filter = $any($event.target).value"
-      >
-
-  </form>
-
-
-</div>
-<app-exibe-moeda [moedas]="moedas | filterByDescription: filter"  ></app-exibe-moeda>

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Moeda } from 'src/app/models/moeda';
-import { nav } from '../../../models/moeda';
+import { MoedasService } from '../moedas-list/service/moedas-list.service';
 
 @Component({
   selector: 'app-exibe-moeda',
@@ -8,9 +8,9 @@ import { nav } from '../../../models/moeda';
   styleUrls: ['./exibe-moeda.component.scss']
 })
 export class ExibeMoedaComponent implements OnInit {
- @Input() moedas: Moeda[] = [];
+ moedas: Moeda | undefined;
 
-  constructor() { }
+  constructor(private moedaService :MoedasService) { }
 
   ngOnInit(): void {
   }

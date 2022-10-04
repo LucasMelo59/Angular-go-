@@ -1,0 +1,12 @@
+.card {
+  border-radius: 10px;
+
+}
+img{
+  width: 100px;
+}
+
+.card:hover {
+  transition: 1s;
+  border-color: black;
+}

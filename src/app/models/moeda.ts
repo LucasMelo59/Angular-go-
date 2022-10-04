@@ -11,7 +11,3 @@ src: string
 routerlink: string;
 }
 
-export const nav = {
-routerlink: 'buscar'
-
-}
