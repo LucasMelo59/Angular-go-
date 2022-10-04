@@ -12,6 +12,7 @@ import { MoedaByIdRoutes } from './pages/moedas/moeda-by-id/moeda-by-id.routing'
 import { MoedaByIdModule } from './pages/moedas/moeda-by-id/moeda-by-id.module';
 import { NavBarComponent } from './templates/nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     MoedaByIdRoutes,
     MoedaByIdModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule
 
 
   ],
