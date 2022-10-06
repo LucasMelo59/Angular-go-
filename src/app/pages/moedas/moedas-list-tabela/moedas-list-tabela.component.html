@@ -1,0 +1,51 @@
+<div class="container  " >
+  <div class="row mb-2 mt-4 "  >
+
+    <div  class="btn-group col-2 " role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check" [routerLink]="['/moedas']"  name="btnradio" id="btnradio1" autocomplete="off"  >
+      <label class="btn btn-outline-primary" for="btnradio1">Cards</label>
+
+      <input type="radio" class="btn-check" [routerLink]="['/tabela']"  name="btnradio" id="btnradio3" autocomplete="off" checked >
+      <label class="btn btn-outline-primary" for="btnradio3">Table</label>
+    </div>
+
+  </div>
+ </div>
+
+<div class="container" >
+  <div class="row mb-2 mt-4 " >
+    <div class="col-sm-6 col-md-8 col-lg-12 mb-2 mt-3 text-center"   >
+      <table  class="table table-dark  col-12 table-hover"  >
+        <thead>
+          <tr>
+            <th scope="col" >Id</th>
+
+            <th colspan="2" scope="col" >Nome</th>
+            <th colspan="2" scope="col" >Codigo</th>
+            <th colspan="2" scope="col" >Preço</th>
+            <th colspan="2" scope="col" >Votos</th>
+            <th colspan="2" scope="col" ></th>
+          </tr>
+        </thead>
+
+        <tbody *ngFor="let moedas of moedas" >
+          <tr>
+            <th scope="row">{{moedas.id}}</th>
+            <td colspan="2" >{{moedas.nome}}</td>
+            <td colspan="2" >{{moedas.descricao}}</td>
+            <td colspan="2" >{{moedas.preco}}</td>
+            <td>{{moedas.votos}}</td>
+            <td colspan="2" style="cursor: pointer;" (click)="addVotos(moedas.id, moedas)" >
+              <i style="color: green;" class="fa-solid fa-arrow-up"></i>
+            </td>
+            <td colspan="2" style="cursor: pointer;" (click)="downVotos(moedas, moedas.id)" >
+              <i style="color: red;" class="fa-solid fa-arrow-down"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+

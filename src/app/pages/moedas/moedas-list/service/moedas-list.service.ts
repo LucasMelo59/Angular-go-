@@ -20,9 +20,8 @@ export class MoedasService {
       return this.http.post<Moeda>(`${API}/upvoter/${id}`, model)
     }
 
-    DownVotes(id:number) {
-
-      return this.http.get<Moeda[]>(API + '/moedas/downvoter/' + id)
+    DownVotes(id:number, model: Moeda) {
+      return this.http.post<Moeda>(`${API}/downvoter/${id}`, model)
     }
   }
 

@@ -13,12 +13,12 @@ import { MoedaByIdModule } from './pages/moedas/moeda-by-id/moeda-by-id.module';
 import { NavBarComponent } from './templates/nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MoedasTabelaListModule } from './pages/moedas/moedas-list-tabela/moedas-list-tabela.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-
 
   ],
   imports: [
@@ -31,6 +31,7 @@ import { RouterModule } from '@angular/router';
     MoedaInvalidaModule,
     MoedaByIdRoutes,
     MoedaByIdModule,
+    MoedasTabelaListModule,
     AppRoutingModule,
     FormsModule,
     RouterModule

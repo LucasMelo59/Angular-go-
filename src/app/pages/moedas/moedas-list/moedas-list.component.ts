@@ -18,8 +18,6 @@ export class MoedasListComponent implements OnInit {
     this.moedasService.allCoins.subscribe(
       res => {
         this.moedas = res;
-        this.moedas.sort()
-
       }
     );
 
@@ -27,6 +25,15 @@ export class MoedasListComponent implements OnInit {
 
 addVotos(moedas: Moeda, id: number){
   this.moedasService.Votes(moedas, id).subscribe(
+    result => {
+      moedas.votos = result.votos
+    }
+  )
+
+}
+
+downVotos(moedas: Moeda, id: number){
+  this.moedasService.DownVotes(id, moedas).subscribe(
     result => {
       moedas.votos = result.votos
     }
